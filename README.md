@@ -65,4 +65,4 @@ A beautiful, interactive social media profile page with a stunning theme and  la
 
 Enjoy your beautiful profile page! 💜
 
-####author:Praviksha r shetty
+#### author:Praviksha r shetty
