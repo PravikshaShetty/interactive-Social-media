@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Profile Page with Posts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-header">
+        <img src="https://i.pravatar.cc/100" alt="Profile" class="profile-pic">
+        <div class="profile-info">
+            <h1>John Doe <span class="verified-badge">✔️</span></h1>
+            <p class="bio">A short and intriguing bio goes here, capturing the essence of who you are.</p>
+            <div class="stats">
+                <span>Posts: <strong>120</strong></span> | 
+                <span>Followers: <strong>300</strong></span> | 
+                <span>Following: <strong>180</strong></span> | 
+                <span>Level: <strong>5</strong></span>
+            </div>
+            <div class="friends-preview">
+                <img src="https://i.pravatar.cc/30?img=1" alt="Friend 1">
+                <img src="https://i.pravatar.cc/30?img=2" alt="Friend 2">
+                <img src="https://i.pravatar.cc/30?img=3" alt="Friend 3">
+                <span class="more-friends">+3 more</span>
+            </div>
+            <div class="badges">
+                <span class="badge">Influencer</span>
+                <span class="badge">Trending Creator</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-button active" data-target="posts">Posts 📝</button>
+        <button class="tab-button" data-target="achievements">Achievements 🏆</button>
+    </div>
+
+    <div class="post-creator">
+        <div class="create-post">
+            <textarea placeholder="What's on your mind?" class="post-textarea"></textarea>
+            <div class="post-options">
+                <button class="add-photo-btn">📷 Photo</button>
+                <button class="add-mood-btn">😊 Mood</button>
+                <button class="publish-btn">Publish</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-filter">
+        <input type="text" placeholder="Search posts..." class="search-input">
+        <select class="filter-select">
+            <option value="all">All Posts</option>
+            <option value="photos">Photos Only</option>
+            <option value="text">Text Only</option>
+            <option value="recent">Recent</option>
+        </select>
+    </div>
+
+    <div class="content">
+        <div class="tab-content active" id="posts">
+            <!-- Photo Posts -->
+            <div class="post-card" data-type="photo">
+                <img src="https://picsum.photos/300/300?random=1" alt="Post Image">
+                <div class="post-overlay">
+                    <div class="post-interactions">
+                        <span class="like-button">❤️ 24</span>
+                        <span class="comment-button">💬 8</span>
+                        <span class="share-button">🔄 3</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-card" data-type="photo">
+                <img src="https://picsum.photos/300/300?random=2" alt="Post Image">
+                <div class="post-overlay">
+                    <div class="post-interactions">
+                        <span class="like-button">❤️ 31</span>
+                        <span class="comment-button">💬 6</span>
+                        <span class="share-button">🔄 2</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-card" data-type="photo">
+                <img src="https://picsum.photos/300/300?random=3" alt="Post Image">
+                <div class="post-overlay">
+                    <div class="post-interactions">
+                        <span class="like-button">❤️ 19</span>
+                        <span class="comment-button">💬 4</span>
+                        <span class="share-button">🔄 1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text/Quote Posts -->
+            <div class="post-card" data-type="text">
+                <div class="post-content">
+                    <div class="post-icon">💭</div>
+                    <div class="post-quote">"Life is short, smile while you still have teeth."</div>
+                    <div class="post-author">- Steve Jobs</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-interactions">
+                        <span class="like-button">❤️ 42</span>
+                        <span class="comment-button">💬 18</span>
+                        <span class="share-button">🔄 9</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-card" data-type="text">
+                <div class="post-content">
+                    <div class="post-icon">🤖</div>
+                    <div class="post-text">AI and machine learning are shaping our future!</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-interactions">
+                        <span class="like-button">❤️ 15</span>
+                        <span class="comment-button">💬 12</span>
+                        <span class="share-button">🔄 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-card" data-type="text">
+                <div class="post-content">
+                    <div class="post-icon">🎉</div>
+                    <div class="post-text">Just hit 300 followers! Thank you all! 🚀</div>
+                </div>
+                <div class="post-overlay">
+                    <div class="post-interactions">
+                        <span class="like-button">❤️ 67</span>
+                        <span class="comment-button">💬 23</span>
+                        <span class="share-button">🔄 12</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Photos -->
+            <div class="post-card" data-type="photo">
+                <img src="https://picsum.photos/300/300?random=4" alt="Post Image">
+                <div class="post-overlay">
+                    <div class="post-interactions">
+                        <span class="like-button">❤️ 28</span>
+                        <span class="comment-button">💬 7</span>
+                        <span class="share-button">🔄 4</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-card" data-type="photo">
+                <img src="https://picsum.photos/300/300?random=5" alt="Post Image">
+                <div class="post-overlay">
+                    <div class="post-interactions">
+                        <span class="like-button">❤️ 35</span>
+                        <span class="comment-button">💬 9</span>
+                        <span class="share-button">🔄 6</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-card" data-type="photo">
+                <img src="https://picsum.photos/300/300?random=6" alt="Post Image">
+                <div class="post-overlay">
+                    <div class="post-interactions">
+                        <span class="like-button">❤️ 22</span>
+                        <span class="comment-button">💬 5</span>
+                        <span class="share-button">🔄 2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="achievements">
+            <div class="achievements-grid">
+                <div class="achievement-card earned">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>First Post</h3>
+                    <p>Posted your first content</p>
+                    <div class="achievement-date">Earned 2 months ago</div>
+                </div>
+                <div class="achievement-card earned">
+                    <div class="achievement-icon">❤️</div>
+                    <h3>Popular Creator</h3>
+                    <p>Received 100+ likes</p>
+                    <div class="achievement-date">Earned 1 month ago</div>
+                </div>
+                <div class="achievement-card earned">
+                    <div class="achievement-icon">👥</div>
+                    <h3>Social Butterfly</h3>
+                    <p>Gained 100 followers</p>
+                    <div class="achievement-date">Earned 3 weeks ago</div>
+                </div>
+                <div class="achievement-card earned">
+                    <div class="achievement-icon">🔥</div>
+                    <h3>Streak Master</h3>
+                    <p>Posted for 7 days straight</p>
+                    <div class="achievement-date">Earned 1 week ago</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">⭐</div>
+                    <h3>Influencer</h3>
+                    <p>Reach 1000 followers</p>
+                    <div class="achievement-progress">300/1000</div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">💎</div>
+                    <h3>Content King</h3>
+                    <p>Create 500 posts</p>
+                    <div class="achievement-progress">120/500</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
